@@ -1,6 +1,9 @@
 const express = require('express')
 const ControllerClientes = require('../controllers/clientes.js')
 const ControllerCachorro = require('../controllers/cachorro.js')
+const ControllerAtendimento = require('../controllers/atendimento.js')
+const ControllerAtendimento = require('../controllers/atendimento.js')
+
 
 const controllerCliente = new ControllerClientes()
 const router = express.Router()
@@ -19,6 +22,16 @@ router.get('/api/cachorro/', controllerCachorro.PegarTodos)
 router.post('/api/cachorro', controllerCachorro.Add)
 router.put('/api/cachorro/:id', controllerCachorro.Update)
 router.delete('/api/cachorro/:id', controllerCachorro.Delete)
+
+const controllerAtendimento = new ControllerAtendimento()
+const routters = express.Router()
+
+router.get('/api/atendimento/:id', controllerAtendimento.PegarUm)
+router.get('/api/atendimento/', controllerAtendimento.PegarTodos)
+router.post('/api/atendimento', controllerAtendimento.Add)
+router.put('/api/atendimento/:id', controllerAtendimento.Update)
+router.delete('/api/atendimento/:id', controllerAtendimento.Delete)
+
 
 
 module.exports = router
