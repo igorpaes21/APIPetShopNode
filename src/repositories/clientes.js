@@ -19,7 +19,7 @@ class RepositoriesClientes {
         return result
     }
 
-    async Update(id, pessoa) {
+    async Update(id, clientes) {
         const result = await Clientes.update(clientes, {
             where: {
                 id

@@ -1,4 +1,5 @@
 const Cachorro = require("./cachorro.js");
+const Atendimento = require("./atendimento.js");
 const Clientes = require('./clientes.js')
 const { DataTypes } = require("sequelize");
 const conexao = require("../database.js");
